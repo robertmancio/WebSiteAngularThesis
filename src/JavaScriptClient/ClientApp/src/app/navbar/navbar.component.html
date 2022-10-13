@@ -1,0 +1,25 @@
+<mat-toolbar color="Secondary">
+  <span class="example-spacer"></span>
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+  <div fxLayout="row" layout-align="center" fxShow="false" fxShow.gt-sm>
+    <button mat-button [matMenuTriggerFor]="menu">Admin</button>
+    <mat-menu #menu="matMenu">
+      <button class="example-spacer" mat-menu-item>Usuarios</button>
+      <button mat-menu-item>Accesos</button>
+    </mat-menu>
+    <button mat-button routerLink="/products">Productos</button>
+    <button mat-button routerLink="/">Inventario</button>
+    <button mat-button routerLink="/logout">Cerrar sesión</button>
+  </div>
+  <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+    <mat-icon>menu</mat-icon>
+  </button>
+
+
+</mat-toolbar>
+<mat-menu x-position="before" #menu="matMenu">
+  <button mat-menu-item routerLink="/">Clientes</button>
+  <button mat-menu-item routerLink="/">Inventario</button>
+    <button mat-menu-item routerLink="/logout">Cerrar sesión</button>
+</mat-menu>
