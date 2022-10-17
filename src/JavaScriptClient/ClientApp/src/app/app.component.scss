@@ -1,4 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 div {
   background-color: whitesmoke;
 }
-
+img{
+    padding-top: 15px;
+}
