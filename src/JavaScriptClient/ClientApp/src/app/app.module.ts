@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { MatTableModule } from '@angular/material/table'
 import { MatTabsModule } from '@angular/material/tabs';
+import { AddProductCategoryComponent } from './products/add-product-category/add-product-category.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     MenuComponent,
     LoginComponent,
     HomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    AddProductCategoryComponent
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

@@ -1,0 +1,26 @@
+<div class="mat-elevation-z8 table-fixed max-w-screen-lg mx-auto">
+  <div class="container">
+    <form>
+
+      <div id="title">
+        <h1  class=" mat-typography">Create New Product Category</h1>
+      </div>
+      <div id="categoryname">
+        <mat-form-field appearance="standard">
+          <mat-label>Category Name</mat-label>
+          <input matInput maxlength="15" inputmode="tel" placeholder="Type Category Name" formControlName="categoryname" #nameInput>
+        </mat-form-field>
+        <mat-form-field appearance="standard"  id="categoryname">
+          <mat-label>Description</mat-label>
+          <input matInput maxlength="15" inputmode="tel" placeholder="Category Description" formControlName="description" #nameInput>
+        </mat-form-field>
+      </div>
+
+      <div id="submit">
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
