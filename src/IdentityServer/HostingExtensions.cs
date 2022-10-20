@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Serilog;
 using System.Reflection.Metadata;
 using System.Security.Claims;
+using System.Text.Json.Serialization;
 using static System.Formats.Asn1.AsnWriter;
 
 namespace IdentityServerAspNetIdentity;
@@ -29,7 +30,7 @@ internal static class HostingExtensions
         builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
-
+        builder.Services.AddLocalApiAuthentication();
         builder.Services
             .AddIdentityServer(options =>
             {
@@ -66,7 +67,10 @@ internal static class HostingExtensions
         //        options.ClientId = "copy client ID from Google here";
         //        options.ClientSecret = "copy client secret from Google here";
         //    });
-
+        builder.Services.AddControllers().AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+        });
         return builder.Build();
     }
 

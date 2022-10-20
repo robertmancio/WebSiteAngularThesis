@@ -28,7 +28,8 @@ import { AddProductCategoryComponent } from './products/add-product-category/add
     MaterialModule,
     FlexLayoutModule,
     MatTableModule,
-    MatTabsModule
+    MatTabsModule,
+    HttpClientModule
 
   ],
   declarations: [

@@ -76,9 +76,9 @@ C:\Users\RM\Desktop\TESISPR\ddd\AngularIS\src\JavaScriptClient\obj\Debug\net6.0\
 C:\Users\RM\Desktop\TESISPR\ddd\AngularIS\src\JavaScriptClient\obj\Debug\net6.0\JavaScriptClient.pdb
 C:\Users\RM\Desktop\TESISPR\ddd\AngularIS\src\JavaScriptClient\obj\Debug\net6.0\JavaScriptClient.genruntimeconfig.cache
 C:\Users\RM\Desktop\TESISPR\ddd\AngularIS\src\JavaScriptClient\obj\Debug\net6.0\ref\JavaScriptClient.dll
+C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\JavaScriptClient\bin\Debug\net6.0\spa.proxy.json
 C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\JavaScriptClient\bin\Debug\net6.0\web.config
 C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\JavaScriptClient\bin\Debug\net6.0\appsettings.json
-C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\JavaScriptClient\bin\Debug\net6.0\spa.proxy.json
 C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\JavaScriptClient\bin\Debug\net6.0\JavaScriptClient.staticwebassets.runtime.json
 C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\JavaScriptClient\bin\Debug\net6.0\JavaScriptClient.exe
 C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\JavaScriptClient\bin\Debug\net6.0\JavaScriptClient.deps.json

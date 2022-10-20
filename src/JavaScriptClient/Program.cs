@@ -10,10 +10,10 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-//                       ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found.");
-//builder.Services.AddDbContext<ApplicationDbContext>(options =>
-//    options.UseSqlServer(connectionString));
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+                       ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found.");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
 
 
 builder.Services.AddControllersWithViews();
@@ -94,21 +94,15 @@ app.UseEndpoints(endpoints =>
         .RequireAuthorization()
         .AsBffApiEndpoint(requireAntiForgeryCheck: false);
 
-    endpoints.MapGet("/local/identity", LocalIdentityHandler)
-        .AsBffApiEndpoint(requireAntiForgeryCheck: false);
-
     endpoints.MapRemoteBffApiEndpoint("/remote", "https://localhost:5001")
         .RequireAccessToken(Duende.Bff.TokenType.User);
+
+    endpoints.MapControllers()
+        .RequireAuthorization()
+        .AsBffApiEndpoint(requireAntiForgeryCheck: false);
 
     endpoints.MapFallbackToFile("/index.html");
     //endpoints.MapFallbackToFile("../ClientApp/src/index.html");
 });
 
 app.Run();
-
-[Authorize]
-static IResult LocalIdentityHandler(ClaimsPrincipal user, HttpContext context)
-{
-    var name = user.FindFirst("name")?.Value ?? user.FindFirst("sub")?.Value;
-    return Results.Json(new { message = "Local API Success!", user = name });
-}

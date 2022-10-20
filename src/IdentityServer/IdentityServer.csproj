@@ -16,6 +16,7 @@
 	<ItemGroup>
 		<PackageReference Include="Duende.IdentityServer.AspNetIdentity" Version="6.1.5" />
 		<PackageReference Include="Duende.IdentityServer.EntityFramework" Version="6.1.5" />
+		<PackageReference Include="Mapster" Version="7.4.0-pre03" />
 
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.8" />
 
@@ -36,9 +37,5 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Data\" />
 	</ItemGroup>
 </Project>

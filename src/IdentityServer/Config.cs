@@ -20,7 +20,8 @@ public static class Config
             {
                 JwtClaimTypes.Name,
                 JwtClaimTypes.Email,
-                JwtClaimTypes.Role
+                JwtClaimTypes.Role,
+                JwtClaimTypes.PreferredUserName
             }),
         };
 
@@ -28,6 +29,7 @@ public static class Config
         new List<ApiScope>
         {
             new ApiScope("api1", "My API"),
+            new ApiScope(IdentityServerConstants.LocalApi.ScopeName),
         };
 
     public static IEnumerable<Client> Clients =>
@@ -80,7 +82,6 @@ public static class Config
 
                 // where to redirect to after login
                 RedirectUris = { "https://localhost:5004/signin-oidc" },
-
                 // where to redirect to after logout
                 PostLogoutRedirectUris = { "https://localhost:5004/signout-callback-oidc" },
 
@@ -92,11 +93,12 @@ public static class Config
                     "api1",
                     "custom.profile",
                     "color",
+                    IdentityServerConstants.LocalApi.ScopeName
                 },
+                AlwaysIncludeUserClaimsInIdToken = true,
                 AllowOfflineAccess = true
             }
         };
-
     public static IEnumerable<ApplicationUser> Users =>
         new List<ApplicationUser>
         {

@@ -16,7 +16,10 @@ const PROXY_CONFIG = [
       "/oauth",
       "/Identity",
       "/.well-known",
-      "/_framework"
+      "/_framework",
+      "/productCategory",
+      "/remote",
+      "/remote/manageUsers"
     ],
     target: target,
     secure: false,

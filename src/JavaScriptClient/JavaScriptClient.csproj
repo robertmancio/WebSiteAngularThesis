@@ -52,7 +52,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Data\Migrations\" />
+	  <Folder Include="ClientApp\src\app\services\" />
 	  <Folder Include="Models\Responses\" />
 	</ItemGroup>
 

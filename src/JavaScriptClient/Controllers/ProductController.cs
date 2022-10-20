@@ -11,11 +11,11 @@ namespace FootballPools.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class GroupController : ControllerBase
+    public class ProductCategoryController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
-        public GroupController(ApplicationDbContext context)
+        public ProductCategoryController(ApplicationDbContext context)
         {
             _context = context;
         }

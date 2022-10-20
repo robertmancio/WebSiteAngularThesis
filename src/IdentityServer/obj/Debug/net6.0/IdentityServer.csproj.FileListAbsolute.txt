@@ -709,6 +709,8 @@ C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\Ident
 C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\IdentityServer\bin\Debug\net6.0\Duende.IdentityServer.Storage.dll
 C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\IdentityServer\bin\Debug\net6.0\Humanizer.dll
 C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\IdentityServer\bin\Debug\net6.0\IdentityModel.dll
+C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\IdentityServer\bin\Debug\net6.0\Mapster.dll
+C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\IdentityServer\bin\Debug\net6.0\Mapster.Core.dll
 C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\IdentityServer\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\IdentityServer\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\IdentityServer\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
