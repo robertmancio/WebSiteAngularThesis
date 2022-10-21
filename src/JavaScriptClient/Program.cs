@@ -16,7 +16,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
+
 
 builder.Services.AddAuthorization();
 
@@ -50,6 +51,7 @@ builder.Services
         options.Scope.Add("openid");
         options.Scope.Add("profile");
         options.Scope.Add("api1");
+        options.Scope.Add("IdentityServerApi");
         options.Scope.Add("color");
         options.Scope.Add("offline_access");
         options.Scope.Add("custom.profile");
@@ -61,6 +63,7 @@ builder.Services
         options.ClaimActions.MapUniqueJsonKey("favorite_color", "favorite_color");
         options.ClaimActions.MapUniqueJsonKey("offline_access", "offline_access");
         options.ClaimActions.MapUniqueJsonKey("role", "role");
+        options.ClaimActions.MapUniqueJsonKey("preferred_username", "preferred_username");
 
         options.TokenValidationParameters = new()
         {
@@ -94,7 +97,7 @@ app.UseEndpoints(endpoints =>
         .RequireAuthorization()
         .AsBffApiEndpoint(requireAntiForgeryCheck: false);
 
-    endpoints.MapRemoteBffApiEndpoint("/remote", "https://localhost:5001")
+    endpoints.MapRemoteBffApiEndpoint("/remote", "https://localhost:5001", requireAntiForgeryCheck: false)
         .RequireAccessToken(Duende.Bff.TokenType.User);
 
     endpoints.MapControllers()

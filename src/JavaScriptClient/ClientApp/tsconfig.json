@@ -1,7 +1,7 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "noImplicitAny": false,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -10,6 +10,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "strictPropertyInitialization": false,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -20,17 +21,12 @@
     "module": "es2020",
     "lib": [
       "es2020",
-      "dom"
-    ],
-    "typeRoots": [
-      "node_modules/@types",
-      "node_modules/@angular",
-      "node_modules/@angular/common/http"
+      "dom",
+      "DOM.Iterable"
     ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
-    "strictPropertyInitialization": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true

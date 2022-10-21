@@ -17,6 +17,9 @@ import { ProductsComponent } from './products/products.component';
 import { MatTableModule } from '@angular/material/table'
 import { MatTabsModule } from '@angular/material/tabs';
 import { AddProductCategoryComponent } from './products/add-product-category/add-product-category.component';
+import { UsersComponent } from './users/users.component';
+import { LogoutComponent } from './logout/logout.component';
+import { LocalService } from './authentication/local.service';
 
 
 @NgModule({
@@ -39,9 +42,11 @@ import { AddProductCategoryComponent } from './products/add-product-category/add
     LoginComponent,
     HomeComponent,
     ProductsComponent,
-    AddProductCategoryComponent
+    AddProductCategoryComponent,
+    UsersComponent,
+    LogoutComponent
   ],
-  providers: [AuthService],
+  providers: [AuthService, LocalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
