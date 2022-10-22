@@ -5,6 +5,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ProductsCategory } from 'src/app/models/productscategory-model';
 import { ProductscategoryService } from 'src/app/services/productscategory.service'
 import { AddProductCategoryComponent } from './add-product-category/add-product-category.component';
+import { MatDialog } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'products',
@@ -17,10 +19,17 @@ export class ProductsComponent implements OnInit {
   dataSource = new MatTableDataSource<ProductsCategory>();
   displayedColumns: string[] = ['id', 'name'];
 
+  openDialog() {
+    this.dialog.open(AddProductCategoryComponent, {
+      width: '30%'
+    });
+    
+  }
+
   @ViewChild(MatPaginator, { static: false }) set matPaginator(paginator: MatPaginator) {
     this.dataSource.paginator = paginator;
   }
-  constructor(private productscategoryService: ProductscategoryService) { }
+  constructor(private productscategoryService: ProductscategoryService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.productscategoryService.getAllProductsCategory().subscribe(productscategory => {

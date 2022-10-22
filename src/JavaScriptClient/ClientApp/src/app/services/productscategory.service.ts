@@ -15,4 +15,10 @@ export class ProductscategoryService {
   getAllProductsCategory():Observable<ProductsCategory[]> {
    return this.http.get<ProductsCategory[]>(this.baseApiUrl + 'productCategory');
   }
+  addProductCategory(addProductCategoryRequest: ProductsCategory): Observable<ProductsCategory> {
+    addProductCategoryRequest.id = 0;
+    return this.http.post<ProductsCategory>(this.baseApiUrl = 'productCategory',
+      addProductCategoryRequest);
+  }
+
 }

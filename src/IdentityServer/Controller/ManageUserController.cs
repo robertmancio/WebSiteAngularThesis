@@ -10,15 +10,15 @@ using static Duende.IdentityServer.IdentityServerConstants;
 namespace IdentityServer.Controller
 {
         [ApiController]
-        [Route("user")]
+        [Route("ManageUsers")]
         [Authorize(LocalApi.PolicyName)]
-        public class UserController : ControllerBase
+        public class ManageUserController : ControllerBase
         {
             private readonly ApplicationDbContext _context;
             private readonly UserManager<ApplicationUser> _userManager;
             private readonly RoleManager<IdentityRole> _roleManager;
 
-            public UserController(
+            public ManageUserController(
                 ApplicationDbContext context,
                 UserManager<ApplicationUser> userManager,
                 RoleManager<IdentityRole> roleManager

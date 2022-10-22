@@ -1,4 +1,35 @@
-<div class="mat-elevation-z8 table-fixed max-w-screen-lg mx-auto">
+<h1 mat-dialog-title>Add Product Category</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="outline">
+    <mat-label>Product Category Name</mat-label>
+    <input matInput placeholder="Name">
+  </mat-form-field>
+</div>
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button style="margin-left: 8px" mat-raised-button color="primary">Save</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="mat-elevation-z8 table-fixed max-w-screen-lg mx-auto">
   <div class="container">
     <form>
 
@@ -6,9 +37,10 @@
         <h1  class=" mat-typography">Create New Product Category</h1>
       </div>
       <div id="categoryname">
-        <mat-form-field appearance="standard">
+        <mat-form-field appearance="standard" (ngSubmit)="addProductCategoryRequest()">
           <mat-label>Category Name</mat-label>
-          <input matInput maxlength="15" inputmode="tel" placeholder="Type Category Name" formControlName="categoryname" #nameInput>
+          <input matInput maxlength="15" inputmode="tel" placeholder="Type Category Name" formControlName="name" id="name"
+                 [(ngModel)]="addProductCategoryRequest.name" #nameInput>
         </mat-form-field>
         <mat-form-field appearance="standard"  id="categoryname">
           <mat-label>Description</mat-label>
@@ -23,4 +55,4 @@
     </form>
 
   </div>
-</div>
+</div>-->

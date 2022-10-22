@@ -20,6 +20,7 @@ import { AddProductCategoryComponent } from './products/add-product-category/add
 import { UsersComponent } from './users/users.component';
 import { LogoutComponent } from './logout/logout.component';
 import { LocalService } from './authentication/local.service';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { LocalService } from './authentication/local.service';
     FlexLayoutModule,
     MatTableModule,
     MatTabsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
 
   ],
   declarations: [
