@@ -35,7 +35,6 @@ export class AuthService {
   logout() {
     this.userClaim = this.local.getJsonData(LocalK.USER);
     let logoutUrl = this.userClaim.find(x => x.type == UserClaimK.LOGOUT_URL)?.value!;
-    this.userClaim = [];
     this.local.clearData();
     if (this.userClaim) {
       window.location.href = logoutUrl;

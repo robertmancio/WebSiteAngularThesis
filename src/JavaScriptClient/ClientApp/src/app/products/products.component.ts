@@ -17,13 +17,22 @@ import { MatDialog } from '@angular/material/dialog';
 export class ProductsComponent implements OnInit {
   productsCategory: ProductsCategory[] = [];
   dataSource = new MatTableDataSource<ProductsCategory>();
-  displayedColumns: string[] = ['id', 'name'];
+  displayedColumns: string[] = ['id', 'name', 'actions'];
 
   openDialog() {
-    this.dialog.open(AddProductCategoryComponent, {
+    const dialogRef = this.dialog.open(AddProductCategoryComponent, {
       width: '30%'
     });
-    
+
+    dialogRef.afterClosed().subscribe(response => {
+      if (response) {
+        this.productscategoryService.getAllProductsCategory().subscribe(productscategory => {
+          this.productsCategory = productscategory;
+          this.dataSource.data = this.productsCategory;
+          this.dataSource.paginator = this.matPaginator;
+        });
+      }
+    });
   }
 
   @ViewChild(MatPaginator, { static: false }) set matPaginator(paginator: MatPaginator) {
@@ -38,5 +47,25 @@ export class ProductsComponent implements OnInit {
       this.dataSource.paginator = this.matPaginator;
     });
   }
-}
+  editProduct(row: any) {
+    const dialogRef = this.dialog.open(AddProductCategoryComponent, {
+      width: '30%',
+      data:row
+    });
 
+    dialogRef.afterClosed().subscribe(response => {
+      if (response) {
+        this.productscategoryService.getAllProductsCategory().subscribe(productscategory => {
+          this.productsCategory = productscategory;
+          this.dataSource.data = this.productsCategory;
+          this.dataSource.paginator = this.matPaginator;
+        });
+      }
+    });
+  }
+  deleteProduct(id: number) {
+    this.productscategoryService.deleteProductCategory(id).subscribe(deleteproduct => {
+      alert("Product Deleted Succesfully")
+    })
+  }
+}

@@ -35,10 +35,33 @@ namespace FootballPools.Controllers
         [HttpPost]
         public async Task<Product> Post(CreateProduct request)
         {
-            var newMatch = request.Adapt<Product>();
-            await _context.AddAsync(newMatch);
+            var newProduct = request.Adapt<Product>();
+            await _context.AddAsync(newProduct);
             await _context.SaveChangesAsync();
-            return newMatch;
+            return newProduct;
+        }
+        [HttpPatch]
+        public async Task<Product> Patch(UpdateProduct request)
+        {
+            var product = await _context.Products.FindAsync(request.id);
+            if(product == null)
+            {
+            }
+            var UpdateProductCategory = request.Adapt(product);
+            _context.Update(UpdateProductCategory);
+            await _context.SaveChangesAsync();
+            return UpdateProductCategory;
+        }
+        [HttpDelete("id")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var product = await _context.Products.FindAsync(id);
+            if (product == null)
+            {
+            }
+            _context.Remove(product);
+            await _context.SaveChangesAsync();
+            return Ok();
         }
     }
 }

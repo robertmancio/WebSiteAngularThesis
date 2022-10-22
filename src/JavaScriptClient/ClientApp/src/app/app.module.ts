@@ -21,6 +21,7 @@ import { UsersComponent } from './users/users.component';
 import { LogoutComponent } from './logout/logout.component';
 import { LocalService } from './authentication/local.service';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,7 +35,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatTableModule,
     MatTabsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule,
+    FormsModule
 
   ],
   declarations: [

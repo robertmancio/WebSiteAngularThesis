@@ -7,6 +7,7 @@ import { AddProductCategoryComponent } from './products/add-product-category/add
 import { UsersComponent } from './users/users.component';
 //Guard
 import { AuthGuard } from './shared/auth.guard';
+import { LogoutComponent } from './logout/logout.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'products', pathMatch: 'full', component: ProductsComponent },
   { path: 'add-product-category', pathMatch: 'full', component: AddProductCategoryComponent },
   { path: 'users-component', pathMatch: 'full', component: UsersComponent },
+  { path: 'logout', pathMatch: 'full', component: LogoutComponent },
 ];
 
 @NgModule({
