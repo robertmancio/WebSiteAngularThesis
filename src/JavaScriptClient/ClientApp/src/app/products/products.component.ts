@@ -64,8 +64,12 @@ export class ProductsComponent implements OnInit {
     });
   }
   deleteProduct(id: number) {
-    this.productscategoryService.deleteProductCategory(id).subscribe(deleteproduct => {
-      alert("Product Deleted Succesfully")
+    this.productscategoryService.deleteProductCategory(id).subscribe(deletep => {
+      this.productscategoryService.getAllProductsCategory().subscribe(productscategory => {
+        this.productsCategory = productscategory;
+        this.dataSource.data = this.productsCategory;
+        this.dataSource.paginator = this.matPaginator;
+      })
     })
   }
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASVnDLuH+VUiA3hXERGtu7AAAAAACAAAAAAAQZgAAAAEAACAAAABO1RbLyexcS3at5PX6eBLjukbJQ06Rc+pIJycx9+A9zQAAAAAOgAAAAAIAACAAAAAKcAKt8fQjdttbKiEFNxncwhU/UmwVr4dm8OfP41L6p4AAAADrB9Yu32r2SCsIA0D6pkKC1M0RijuEf6CzrAekdi4aAIgR+iVuLJBDX4SZpk8KfrAZcAFsWWFBpKGcNm7GkziwX5VKp0e8ggpXfQVmevszhOgw66h2hBIeJ4zr9A7Fc3Pwl1BwOVsMp+QFm2VfwCSQMnU9jf6cCLZiyocDjdISr0AAAADE+n7M55MclTb7DwQSHRCJh4uTHZrLLMZzhDN43q3cd/2sos6TqRSQ6IEWLr4xVXy3qIRKdafvSg+UZWKEabgI</EncryptedPassword>
+    <History>False|2022-10-23T00:31:49.7093315Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:identityserverdbserver1223.database.windows.net,1433%3bInitial Catalog=JavaScriptClient_db%3bUser Id=robertmancio%40identityserverdbserver1223%3bPassword=M%40dness11</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="JavaScriptClient.Data.Context.ApplicationDbContext">
+      <Value>Data Source=tcp:identityserverdbserver1223.database.windows.net,1433%3bInitial Catalog=JavaScriptClient_db%3bUser Id=robertmancio%40identityserverdbserver1223%3bPassword=M%40dness11</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

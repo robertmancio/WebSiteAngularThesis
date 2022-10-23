@@ -9,13 +9,9 @@
     <button mat-button [matMenuTriggerFor]="admin">Admin</button>
     <mat-menu #admin="matMenu">
       <button mat-menu-item routerLink="/users-component">Users</button>
-      <button mat-menu-item routerLink="/aboutus">Roles</button>
-      <button mat-menu-item [matMenuTriggerFor]="manageproducts">Manage Products</button>
+      <button mat-menu-item routerLink="/products">Products Category</button>
     </mat-menu>
-    <mat-menu #manageproducts="matMenu">
-      <button mat-menu-item routerLink="/products">Products Category List</button>
-      <button mat-menu-item routerLink="/add-product-category">Add Product Category</button>
-    </mat-menu>
+
 
 
     <button mat-button routerLink="/home">Home</button>

@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
 import { Users } from '../models/users-model';
 
 @Injectable({
@@ -9,7 +8,7 @@ import { Users } from '../models/users-model';
 })
 export class UsersService {
 
-  baseApiUrl: string = environment.baseApiUrl;
+  baseApiUrl: string = '/';
   constructor(private http: HttpClient) { }
 
   getAllUsers():Observable<Users[]> {

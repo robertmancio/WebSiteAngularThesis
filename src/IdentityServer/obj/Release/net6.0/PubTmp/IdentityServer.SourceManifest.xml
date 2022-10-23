@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\IdentityServer\obj\Release\net6.0\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\IdentityServer\obj\Release\net6.0\PubTmp\EFSQLScripts\Duende.IdentityServer.EntityFramework.DbContexts.ConfigurationDbContext.sql" />
+  <dbfullsql path="C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\IdentityServer\obj\Release\net6.0\PubTmp\EFSQLScripts\Duende.IdentityServer.EntityFramework.DbContexts.PersistedGrantDbContext.sql" />
+  <dbfullsql path="C:\Users\RM\Desktop\TESISPR\GUATEMALAFELIZIMPORTS\WebSiteAngularThesis\src\IdentityServer\obj\Release\net6.0\PubTmp\EFSQLScripts\IdentityServerAspNetIdentity.Data.ApplicationDbContext.sql" />
+</sitemanifest>

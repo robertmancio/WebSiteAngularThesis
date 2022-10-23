@@ -21,8 +21,9 @@ builder.Services.AddControllers();
 
 builder.Services.AddAuthorization();
 
-builder.Services.AddBff()
-    .AddRemoteApis();
+builder.Services.AddBff(options=>
+options.LicenseKey= "eyJhbGciOiJQUzI1NiIsImtpZCI6IklkZW50aXR5U2VydmVyTGljZW5zZWtleS83Y2VhZGJiNzgxMzA0NjllODgwNjg5MTAyNTQxNGYxNiIsInR5cCI6ImxpY2Vuc2Urand0In0.eyJpc3MiOiJodHRwczovL2R1ZW5kZXNvZnR3YXJlLmNvbSIsImF1ZCI6IklkZW50aXR5U2VydmVyIiwiaWF0IjoxNjYwNTQzNDk4LCJleHAiOjE2OTIwNzk0OTgsImNvbXBhbnlfbmFtZSI6Ikd1YXRlbWFsYSBGZWxpeiBJbXBvcnRzIiwiY29udGFjdF9pbmZvIjoicm9iZXJ0bG1hbmNpb0BnbWFpbC5jb20iLCJlZGl0aW9uIjoiQ29tbXVuaXR5In0.U9EibndkhBHxbH4qnmGhPLom3rjQpLp7FNcFZktMOLA8Qe1vYEbS7u9W_Z8RHRn6q3goAbb7Lv_MVLHxfJYyUZ4HUip3zPa6nZlc41TqOiwyQlk9Tr9SknHFPSvrB3OcHjrGHB1r0wfpcbbSJk-pusMJYfNfOPBxle7zSeN2VYelhdGSOFd6JAt33hEjJojbj42z0R-0_iPiKb1-wPHCZyo9TkbOO8MDuj9jnctX5H6SUrC6-Nbep742BC3ibMB78H2m1LSOBvE0tCrT2dKbpxW5pG-IDRCqKLR09HK8NGDqh0bzgikYqageDtZjQhDsI3whgrvfXqugWjirZV95Lw"
+    ).AddRemoteApis();
 
 builder.Services
     .AddAuthentication(options =>
@@ -37,7 +38,8 @@ builder.Services
         options.Cookie.SameSite = SameSiteMode.Strict;
     }).AddOpenIdConnect("oidc", options =>
     {
-        options.Authority = "https://localhost:5001";
+        //options.Authority = "https://localhost:5001";
+        options.Authority = "https://guatemalafelizimportssecurity.azurewebsites.net";
         options.ClientId = "bff";
         options.ClientSecret = "secret";
         options.ResponseType = "code";
@@ -97,7 +99,8 @@ app.UseEndpoints(endpoints =>
         .RequireAuthorization()
         .AsBffApiEndpoint(requireAntiForgeryCheck: false);
 
-    endpoints.MapRemoteBffApiEndpoint("/remote", "https://localhost:5001", requireAntiForgeryCheck: false)
+    //endpoints.MapRemoteBffApiEndpoint("/remote", "https://localhost:5001", requireAntiForgeryCheck: false)
+    endpoints.MapRemoteBffApiEndpoint("/remote", "https://guatemalafelizimportssecurity.azurewebsites.net", requireAntiForgeryCheck: false)
         .RequireAccessToken(Duende.Bff.TokenType.User);
 
     endpoints.MapControllers()

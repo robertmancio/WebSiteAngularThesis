@@ -34,7 +34,7 @@ internal static class HostingExtensions
         builder.Services
             .AddIdentityServer(options =>
             {
-                options.LicenseKey = "eyJhbGciOiJQUzI1NiIsImtpZCI6IklkZW50aXR5U2VydmVyTGljZW5zZWtleS83Y2VhZGJiNzgxMzA0NjllODgwNjg5MTAyNTQxNGYxNiIsInR5cCI6ImxpY2Vuc2Urand0In0.eyJpc3MiOiJodHRwczovL2R1ZW5kZXNvZnR3YXJlLmNvbSIsImF1ZCI6IklkZW50aXR5U2VydmVyIiwiaWF0IjoxNjYwNDc5ODc4LCJleHAiOjE2OTIwMTU4NzgsImNvbXBhbnlfbmFtZSI6IkRlbnRhbCBFc2NvYmFyIiwiY29udGFjdF9pbmZvIjoiamVnbnpjQGdtYWlsLmNvbSIsImVkaXRpb24iOiJDb21tdW5pdHkifQ.ViQpxTylWcKbvenTieDhU3utG33VfRjrb9oTShb-VV3hdn1JsWEyArTpou_PuetxUvKmj9LGs-WAybO3jGbPTvOjTA3Ayq5k9E-XMnKPqDEYSQbHloYuAkjM7lE8LKXBX3H9K2rQJsOFjVlhDisJdciKCfxZov1RuPFZ31SfeA2kna2jcxq_k7v4dzYWdmwf_gHSu3NJIq7IQPdltkbJR6o1gCnIkkJyNFUqu9aPxQNwHvbJ99BVSyVKMNvoIeNbC4HBBw87tNBgxin8PlJzjBcUGIJA-DIj-BZ3jiBsYOMZc3nXaGpBuzCDZI-6wfEywEv8CbBsE558oQCA2OYOsg";
+                options.LicenseKey = "eyJhbGciOiJQUzI1NiIsImtpZCI6IklkZW50aXR5U2VydmVyTGljZW5zZWtleS83Y2VhZGJiNzgxMzA0NjllODgwNjg5MTAyNTQxNGYxNiIsInR5cCI6ImxpY2Vuc2Urand0In0.eyJpc3MiOiJodHRwczovL2R1ZW5kZXNvZnR3YXJlLmNvbSIsImF1ZCI6IklkZW50aXR5U2VydmVyIiwiaWF0IjoxNjYwNTQzNDk4LCJleHAiOjE2OTIwNzk0OTgsImNvbXBhbnlfbmFtZSI6Ikd1YXRlbWFsYSBGZWxpeiBJbXBvcnRzIiwiY29udGFjdF9pbmZvIjoicm9iZXJ0bG1hbmNpb0BnbWFpbC5jb20iLCJlZGl0aW9uIjoiQ29tbXVuaXR5In0.U9EibndkhBHxbH4qnmGhPLom3rjQpLp7FNcFZktMOLA8Qe1vYEbS7u9W_Z8RHRn6q3goAbb7Lv_MVLHxfJYyUZ4HUip3zPa6nZlc41TqOiwyQlk9Tr9SknHFPSvrB3OcHjrGHB1r0wfpcbbSJk-pusMJYfNfOPBxle7zSeN2VYelhdGSOFd6JAt33hEjJojbj42z0R-0_iPiKb1-wPHCZyo9TkbOO8MDuj9jnctX5H6SUrC6-Nbep742BC3ibMB78H2m1LSOBvE0tCrT2dKbpxW5pG-IDRCqKLR09HK8NGDqh0bzgikYqageDtZjQhDsI3whgrvfXqugWjirZV95Lw";
                 options.Events.RaiseErrorEvents = true;
                 options.Events.RaiseInformationEvents = true;
                 options.Events.RaiseFailureEvents = true;
@@ -105,13 +105,13 @@ internal static class HostingExtensions
 
             var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
-            context.Database.EnsureDeleted();
-            persistedGrantContext.Database.EnsureDeleted();
-            configContext.Database.EnsureDeleted();
+            //context.Database.EnsureDeleted();
+            //persistedGrantContext.Database.EnsureDeleted();
+            //configContext.Database.EnsureDeleted();
 
-            context.Database.Migrate();
-            persistedGrantContext.Database.Migrate();
-            configContext.Database.Migrate();
+            //context.Database.Migrate();
+            //persistedGrantContext.Database.Migrate();
+            //configContext.Database.Migrate();
 
             if (!configContext.Clients.Any())
                 foreach (var client in Config.Clients)

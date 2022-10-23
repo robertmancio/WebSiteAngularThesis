@@ -35,42 +35,7 @@ public static class Config
     public static IEnumerable<Client> Clients =>
         new List<Client>
         {
-            // machine to machine client
-            new Client
-            {
-                ClientId = "client",
-                ClientSecrets = { new Secret("secret".Sha256()) },
-
-                AllowedGrantTypes = GrantTypes.ClientCredentials,
-                // scopes that client has access to
-                AllowedScopes = { "api1" }
-            },
-
-            // interactive ASP.NET Core Web App
-            new Client
-            {
-                ClientId = "web",
-                ClientSecrets = { new Secret("secret".Sha256()) },
-
-                AllowedGrantTypes = GrantTypes.Code,
-
-                // where to redirect to after login
-                RedirectUris = { "https://localhost:5002/signin-oidc" },
-
-                // where to redirect to after logout
-                PostLogoutRedirectUris = { "https://localhost:5002/signout-callback-oidc" },
-
-                AllowOfflineAccess = true,
-
-                AllowedScopes = new List<string>
-                {
-                    IdentityServerConstants.StandardScopes.OpenId,
-                    IdentityServerConstants.StandardScopes.Profile,
-                    "api1",
-                    "color"
-                }
-            },
-            // JavaScript BFF client
+          
             new Client
             {
                 ClientId = "bff",
@@ -79,11 +44,14 @@ public static class Config
                 AllowedGrantTypes = GrantTypes.Code,
 
                 //AllowedCorsOrigins = new string[] {"https://localhost:5003", "https://localhost:5004"},
+                AllowedCorsOrigins = new string[] {"https://guatemalafelizimports.azurewebsites.net"},
 
                 // where to redirect to after login
-                RedirectUris = { "https://localhost:5004/signin-oidc" },
+                //RedirectUris = { "https://localhost:5004/signin-oidc" },
+                RedirectUris = { "https://guatemalafelizimports.azurewebsites.net/signin-oidc" },
                 // where to redirect to after logout
-                PostLogoutRedirectUris = { "https://localhost:5004/signout-callback-oidc" },
+                PostLogoutRedirectUris = { "https://guatemalafelizimports.azurewebsites.net/signout-callback-oidc" },
+                //PostLogoutRedirectUris = { "https://localhost:5004/signout-callback-oidc" },
 
                 AllowedScopes = new List<string>
                 {
@@ -123,11 +91,13 @@ public static class Config
         {
             new IdentityRole(){
                 Id = "1",
-                Name = "Administrador"
+                Name = "Admin",
+                NormalizedName="ADMIN"
             },
             new IdentityRole(){
                 Id = "2",
-                Name = "Operador"
+                Name = "Employee",
+                NormalizedName="EMPLOYEE"
             }
         };
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASVnDLuH+VUiA3hXERGtu7AAAAAACAAAAAAAQZgAAAAEAACAAAADxCAaZOicoXVrtxWe1AtkW7FJSJ5dNHQmbtUoqj2vWYgAAAAAOgAAAAAIAACAAAAC6NITubFauHdnFRNCNimmqPuWIP+o0bFNHdOLS2s33VoAAAABdjr/062/JsheMpUQIdoVkkhLKmdao0CeGTSdqR3r0A48maYeikhFpM8E/vDDdZLQjQBfMhQ98srWUI0SCvQ3j6aDCdd630T+WIF+vuYc7IWbpqk24VDnt5WL7KkjXB5GQiz9ikSjEFXZf5IN6ImH+oHpoJwNzjeO65eZSPijIt0AAAAA5LnnM3sZzNUbi3XqAoxsjw/csGGOVNNtI1kPgFuz+HffAc6SWOyTNDvN91Knzoq0BIVaChGQ9fD3QoQKlw6ae</EncryptedPassword>
+    <History>True|2022-10-23T01:01:28.9976024Z;False|2022-10-22T18:54:27.6654755-06:00;False|2022-10-22T18:50:37.4279322-06:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=.%3bDatabase=GuatemalaFeliz%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="JavaScriptClient.Data.Context.ApplicationDbContext">
+      <Value>Data Source=tcp:identityserverdbserver1223.database.windows.net,1433%3bInitial Catalog=JavaScriptClient_db%3bUser Id=robertmancio%40identityserverdbserver1223%3bPassword=M%40dness11</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

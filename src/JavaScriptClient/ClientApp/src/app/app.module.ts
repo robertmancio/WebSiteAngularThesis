@@ -49,7 +49,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductsComponent,
     AddProductCategoryComponent,
     UsersComponent,
-    LogoutComponent
+    LogoutComponent,
   ],
   providers: [AuthService, LocalService],
   bootstrap: [AppComponent]

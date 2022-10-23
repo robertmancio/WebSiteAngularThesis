@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "kqyzQSc+Hv+o4GOUbJ2nP4WHp2I+OsYIYk9/8ECQT1I=",
+  "Source": "JavaScriptClient",
+  "BasePath": "_content/JavaScriptClient",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "JavaScriptClient\\wwwroot",
+      "Source": "JavaScriptClient",
+      "ContentRoot": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\JavaScriptClient\\wwwroot\\",
+      "BasePath": "_content/JavaScriptClient",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\JavaScriptClient\\wwwroot\\favicon.ico",
+      "SourceId": "JavaScriptClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\JavaScriptClient\\wwwroot\\",
+      "BasePath": "_content/JavaScriptClient",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    }
+  ]
+}

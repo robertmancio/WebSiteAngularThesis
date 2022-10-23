@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASVnDLuH+VUiA3hXERGtu7AAAAAACAAAAAAAQZgAAAAEAACAAAABKkyy/l45h1FJppRusNY/gB8jW8BMAFHs2CdbOx74PXAAAAAAOgAAAAAIAACAAAAAL7yIHojUreTOWWUX7MIICQatC5WXVXU0c/hu0mVE85IAAAADQ/2GQXTdWqNwZZc04JvOe9PrB1hlquubMzpYoo13sSeua0dmI0Lpl/Nq0iwAmh5rrwlksTtx2bSMTeBfNHxxOnxqs85ryQQI5uefJACTPxwKF6GBkNU0llC/H534klMP3JYsNyNDg+4q0XrkSTigA8qOGxOBplJUgYfswYDQ8bUAAAADfVyZzyr/xeaeDq+rc2EjODtYPQ7iKISWdpjY7wOC1UyzSKADf6uwinGwRBNP5nWDHvJeyLQHHsMbRx1N7g5IC</EncryptedPassword>
+    <History>True|2022-10-23T00:43:18.8866893Z;True|2022-10-22T17:36:55.7037845-06:00;True|2022-10-22T17:34:43.6270947-06:00;True|2022-10-22T17:19:29.6233520-06:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:identityserverdbserver1223.database.windows.net,1433%3bInitial Catalog=securitydb%3bUser Id=robertmancio%40identityserverdbserver1223%3bPassword=M%40dness11</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Duende.IdentityServer.EntityFramework.DbContexts.ConfigurationDbContext">
+      <Value>Data Source=tcp:identityserverdbserver1223.database.windows.net,1433%3bInitial Catalog=securitydb%3bUser Id=robertmancio%40identityserverdbserver1223%3bPassword=M%40dness11</Value>
+    </EFMigrations>
+    <EFMigrations Include="Duende.IdentityServer.EntityFramework.DbContexts.PersistedGrantDbContext">
+      <Value>Data Source=tcp:identityserverdbserver1223.database.windows.net,1433%3bInitial Catalog=securitydb%3bUser Id=robertmancio%40identityserverdbserver1223%3bPassword=M%40dness11</Value>
+    </EFMigrations>
+    <EFMigrations Include="IdentityServerAspNetIdentity.Data.ApplicationDbContext">
+      <Value>Data Source=tcp:identityserverdbserver1223.database.windows.net,1433%3bInitial Catalog=securitydb%3bUser Id=robertmancio%40identityserverdbserver1223%3bPassword=M%40dness11</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

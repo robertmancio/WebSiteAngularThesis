@@ -2,7 +2,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
 import { ProductsCategory } from '../models/productscategory-model';
 
 @Injectable({
@@ -10,7 +9,7 @@ import { ProductsCategory } from '../models/productscategory-model';
 })
 export class ProductscategoryService {
   
-  baseApiUrl: string = environment.baseApiUrl;
+  baseApiUrl: string = '/';
   constructor(private http: HttpClient) { }
 
   getAllProductsCategory():Observable<ProductsCategory[]> {
@@ -26,6 +25,6 @@ export class ProductscategoryService {
       patchProductCategoryRequest);
   }
   deleteProductCategory(id: number): Observable<any> {
-    return this.http.delete(this.baseApiUrl + 'productCategory' + id);
+    return this.http.delete(this.baseApiUrl + 'productCategory/' + id);
   }
 }

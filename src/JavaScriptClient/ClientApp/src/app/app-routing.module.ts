@@ -8,6 +8,7 @@ import { UsersComponent } from './users/users.component';
 //Guard
 import { AuthGuard } from './shared/auth.guard';
 import { LogoutComponent } from './logout/logout.component';
+import { ManageUsersComponent } from './users/manage-users/manage-users.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'products', pathMatch: 'full', component: ProductsComponent },
   { path: 'add-product-category', pathMatch: 'full', component: AddProductCategoryComponent },
   { path: 'users-component', pathMatch: 'full', component: UsersComponent },
+  { path: 'manage-users', pathMatch: 'full', component: ManageUsersComponent },
   { path: 'logout', pathMatch: 'full', component: LogoutComponent },
 ];
 

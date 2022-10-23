@@ -44,7 +44,7 @@ namespace FootballPools.Controllers
         public async Task<Product> Patch(UpdateProduct request)
         {
             var product = await _context.Products.FindAsync(request.id);
-            if(product == null)
+            if (product == null)
             {
             }
             var UpdateProductCategory = request.Adapt(product);
@@ -52,7 +52,7 @@ namespace FootballPools.Controllers
             await _context.SaveChangesAsync();
             return UpdateProductCategory;
         }
-        [HttpDelete("id")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var product = await _context.Products.FindAsync(id);

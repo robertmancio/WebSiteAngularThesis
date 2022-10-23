@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="GuatemalaFelizImportsSecurity" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\IdentityServer\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="Duende.IdentityServer.EntityFramework.DbContexts.ConfigurationDbContext" description="" value="Data Source=tcp:identityserverdbserver1223.database.windows.net,1433;Initial Catalog=securitydb;User Id=robertmancio@identityserverdbserver1223;Password=M@dness11" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\IdentityServer\\obj\\Release\\net6\.0\\PubTmp\\EFSQLScripts\\Duende\.IdentityServer\.EntityFramework\.DbContexts\.ConfigurationDbContext\.sql$" />
+  </parameter>
+  <parameter name="Duende.IdentityServer.EntityFramework.DbContexts.PersistedGrantDbContext" description="" value="Data Source=tcp:identityserverdbserver1223.database.windows.net,1433;Initial Catalog=securitydb;User Id=robertmancio@identityserverdbserver1223;Password=M@dness11" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\IdentityServer\\obj\\Release\\net6\.0\\PubTmp\\EFSQLScripts\\Duende\.IdentityServer\.EntityFramework\.DbContexts\.PersistedGrantDbContext\.sql$" />
+  </parameter>
+  <parameter name="IdentityServerAspNetIdentity.Data.ApplicationDbContext" description="" value="Data Source=tcp:identityserverdbserver1223.database.windows.net,1433;Initial Catalog=securitydb;User Id=robertmancio@identityserverdbserver1223;Password=M@dness11" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\IdentityServer\\obj\\Release\\net6\.0\\PubTmp\\EFSQLScripts\\IdentityServerAspNetIdentity\.Data\.ApplicationDbContext\.sql$" />
+  </parameter>
+</parameters>
