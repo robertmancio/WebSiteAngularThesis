@@ -38,8 +38,8 @@ builder.Services
         options.Cookie.SameSite = SameSiteMode.Strict;
     }).AddOpenIdConnect("oidc", options =>
     {
-        //options.Authority = "https://localhost:5001";
-        options.Authority = "https://guatemalafelizimportssecurity.azurewebsites.net";
+        options.Authority = "https://localhost:5001";
+        //options.Authority = "https://guatemalafelizimportssecurity.azurewebsites.net";
         options.ClientId = "bff";
         options.ClientSecret = "secret";
         options.ResponseType = "code";
@@ -99,8 +99,8 @@ app.UseEndpoints(endpoints =>
         .RequireAuthorization()
         .AsBffApiEndpoint(requireAntiForgeryCheck: false);
 
-    //endpoints.MapRemoteBffApiEndpoint("/remote", "https://localhost:5001", requireAntiForgeryCheck: false)
-    endpoints.MapRemoteBffApiEndpoint("/remote", "https://guatemalafelizimportssecurity.azurewebsites.net", requireAntiForgeryCheck: false)
+    endpoints.MapRemoteBffApiEndpoint("/remote", "https://localhost:5001", requireAntiForgeryCheck: false)
+    //endpoints.MapRemoteBffApiEndpoint("/remote", "https://guatemalafelizimportssecurity.azurewebsites.net", requireAntiForgeryCheck: false)
         .RequireAccessToken(Duende.Bff.TokenType.User);
 
     endpoints.MapControllers()

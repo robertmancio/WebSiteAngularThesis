@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "javascriptclient:build:production"
+              "browserTarget": "JavaScriptClient:build:production"
             },
             "development": {
-              "browserTarget": "javascriptclient:build:development",
+              "browserTarget": "JavaScriptClient:build:development",
               "proxyConfig": "proxy.conf.js"
             }
           },
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "javascriptclient:build"
+            "browserTarget": "JavaScriptClient:build"
           }
         },
         "test": {

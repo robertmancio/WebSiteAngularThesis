@@ -14,14 +14,20 @@ import { AuthService } from './authentication/authentication.service';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductInventoryComponent } from './product-inventory/product.component';
 import { MatTableModule } from '@angular/material/table'
 import { MatTabsModule } from '@angular/material/tabs';
+import { AddProductComponent } from './product-inventory/add-product-category/add-product.component';
 import { AddProductCategoryComponent } from './products/add-product-category/add-product-category.component';
 import { UsersComponent } from './users/users.component';
 import { LogoutComponent } from './logout/logout.component';
 import { LocalService } from './authentication/local.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductService } from './services/product.service';
+import { UsersService } from './services/users.service';
+import { ProductscategoryService } from './services/productscategory.service';
+import { ManageUsersComponent } from './users/manage-users/manage-users.component';
 
 
 @NgModule({
@@ -47,11 +53,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     HomeComponent,
     ProductsComponent,
+    ProductInventoryComponent,
     AddProductCategoryComponent,
+    AddProductComponent,
+    ManageUsersComponent,
     UsersComponent,
     LogoutComponent,
   ],
-  providers: [AuthService, LocalService],
+  providers: [AuthService, LocalService, ProductService, UsersService, ProductscategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -43,15 +43,15 @@ public static class Config
 
                 AllowedGrantTypes = GrantTypes.Code,
 
-                //AllowedCorsOrigins = new string[] {"https://localhost:5003", "https://localhost:5004"},
-                AllowedCorsOrigins = new string[] {"https://guatemalafelizimports.azurewebsites.net"},
+                AllowedCorsOrigins = new string[] {"https://localhost:5003", "https://localhost:5004"},
+                //AllowedCorsOrigins = new string[] {"https://guatemalafelizimports.azurewebsites.net"},
 
                 // where to redirect to after login
-                //RedirectUris = { "https://localhost:5004/signin-oidc" },
-                RedirectUris = { "https://guatemalafelizimports.azurewebsites.net/signin-oidc" },
+                RedirectUris = { "https://localhost:5004/signin-oidc" },
+                //RedirectUris = { "https://guatemalafelizimports.azurewebsites.net/signin-oidc" },
                 // where to redirect to after logout
-                PostLogoutRedirectUris = { "https://guatemalafelizimports.azurewebsites.net/signout-callback-oidc" },
-                //PostLogoutRedirectUris = { "https://localhost:5004/signout-callback-oidc" },
+                //PostLogoutRedirectUris = { "https://guatemalafelizimports.azurewebsites.net/signout-callback-oidc" },
+                PostLogoutRedirectUris = { "https://localhost:5004/signout-callback-oidc" },
 
                 AllowedScopes = new List<string>
                 {
