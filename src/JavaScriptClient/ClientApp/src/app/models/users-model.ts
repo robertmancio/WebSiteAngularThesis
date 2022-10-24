@@ -34,14 +34,16 @@ export class UpdateUser {
 }
 
 export class AddUser {
-  constructor(role?: string, email?: string, userName?: string) {
+  constructor(role?: string, email?: string, userName?: string, password?: string) {
     this.userName = userName;
     this.email = email;
     this.role = role;
+    this.password = password;
   }
   public role?: string;
   public email?: string;
   public userName?: string;
+  public password?: string;
 }
 
 export class UserEditModel {

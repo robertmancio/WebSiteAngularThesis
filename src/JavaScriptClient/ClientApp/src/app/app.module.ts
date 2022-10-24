@@ -29,6 +29,9 @@ import { UsersService } from './services/users.service';
 import { ProductscategoryService } from './services/productscategory.service';
 import { ManageUsersComponent } from './users/manage-users/manage-users.component';
 import { MatInputModule } from '@angular/material/input';
+import { ClientService } from './services/clients.service';
+import { AddClientComponent } from './clients/add-client/add-client.component';
+import { ClientsComponent } from './clients/clients.component';
 
 
 @NgModule({
@@ -56,13 +59,15 @@ import { MatInputModule } from '@angular/material/input';
     HomeComponent,
     ProductsComponent,
     ProductInventoryComponent,
+    ClientsComponent,
     AddProductCategoryComponent,
     AddProductComponent,
+    AddClientComponent,
     ManageUsersComponent,
     UsersComponent,
     LogoutComponent,
   ],
-  providers: [AuthService, LocalService, ProductService, UsersService, ProductscategoryService],
+  providers: [AuthService, LocalService, ProductService, UsersService, ProductscategoryService, ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

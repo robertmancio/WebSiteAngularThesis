@@ -8,40 +8,19 @@
 
     <button mat-button [matMenuTriggerFor]="admin">Admin</button>
     <mat-menu #admin="matMenu">
-      <button mat-menu-item routerLink="/users-component">Users</button>
-      <button mat-menu-item routerLink="/products">Products Category</button>
-      <button mat-menu-item routerLink="/productinv">Products</button>
+      <button mat-menu-item routerLink="/users-component">Manage Users</button>
     </mat-menu>
 
 
 
     <button mat-button routerLink="/home">Home</button>
-    <button mat-button routerLink="/aboutus">About Us</button>
+    <button mat-button routerLink="/clients">Clients</button>
 
-    <button mat-button [matMenuTriggerFor]="animals">Products</button>
+    <button mat-button routerLink="/products">Products Category</button>
 
-    <mat-menu #animals="matMenu">
-      <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
-    </mat-menu>
 
-    <mat-menu #vertebrates="matMenu">
-      <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
-      <button mat-menu-item>Amphibians</button>
-      <button mat-menu-item>Reptiles</button>
-      <button mat-menu-item>Birds</button>
-      <button mat-menu-item>Mammals</button>
-    </mat-menu>
 
-    <mat-menu #fish="matMenu">
-      <button mat-menu-item>Baikal oilfish</button>
-      <button mat-menu-item>Bala shark</button>
-      <button mat-menu-item>Ballan wrasse</button>
-      <button mat-menu-item>Bamboo shark</button>
-      <button mat-menu-item>Banded killifish</button>
-    </mat-menu>
-
-    <button mat-button routerLink="/">Inventory</button>
-    <button mat-button routerLink="/">Contact</button>
+    <button mat-button routerLink="/productinv">Inventory</button>
     <button mat-button routerLink="/logout">Logout</button>
   </div>
   <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>

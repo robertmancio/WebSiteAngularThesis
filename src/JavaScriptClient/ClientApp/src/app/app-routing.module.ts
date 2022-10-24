@@ -11,6 +11,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { ManageUsersComponent } from './users/manage-users/manage-users.component';
 import { AddProductComponent } from './product-inventory/add-product-category/add-product.component';
 import { ProductInventoryComponent } from './product-inventory/product.component';
+import { ClientsComponent } from './clients/clients.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'add-product', pathMatch: 'full', component: AddProductComponent },
   { path: 'products', pathMatch: 'full', component: ProductsComponent },
   { path: 'add-product-category', pathMatch: 'full', component: AddProductCategoryComponent },
+  { path: 'clients', pathMatch: 'full', component: ClientsComponent },
   { path: 'users-component', pathMatch: 'full', component: UsersComponent },
   { path: 'manage-users', pathMatch: 'full', component: ManageUsersComponent },
   { path: 'logout', pathMatch: 'full', component: LogoutComponent },

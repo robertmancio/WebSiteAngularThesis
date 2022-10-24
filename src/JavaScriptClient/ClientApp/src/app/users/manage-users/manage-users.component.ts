@@ -20,7 +20,7 @@ export class ManageUsersComponent implements OnInit {
   addProductCategoryRequest: User = {
     id: '',
     userName:'',
-    email:'',
+    email: '',
     role:''
   };
 
@@ -32,7 +32,10 @@ export class ManageUsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.userForm = this.formBuilder.group({
-      Name: ['', Validators.required]
+      username: [null, Validators.required],
+      email: [null, [Validators.required, Validators.email]],
+      role: [null, Validators.required],
+      password: [null, Validators.required]
     })
 
     if (this.data) {
@@ -43,6 +46,24 @@ export class ManageUsersComponent implements OnInit {
       this.addProductCategoryRequest.id = this.data.id;
     }
   }
+
+  submitForm() {
+    let valid = true;
+    console.log(this.userForm.value);
+    Object.keys(this.userForm.controls).forEach(key => {
+      // Get errors of every form control
+      if (this.userForm.get(key)!.errors != null) {
+        valid = false;
+      }
+    });
+
+    if (valid) {
+      this.userService.addUser(this.userForm.value).subscribe(res => {
+        this.router.navigate(["/user"]);
+      });
+    }
+  }
+
 
 
   addUser() {

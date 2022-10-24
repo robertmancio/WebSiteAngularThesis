@@ -83,7 +83,7 @@ namespace IdentityServer.Controller
                 var result = await _userManager.CreateAsync(user, request.Password);
 
                 if (result.Succeeded)
-                    result = await _userManager.AddToRoleAsync(user, request.Role);
+                   await _userManager.AddToRoleAsync(user, request.Role);
 
                 return Ok();
             }
