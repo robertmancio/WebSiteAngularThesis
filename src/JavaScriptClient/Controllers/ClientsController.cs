@@ -21,29 +21,29 @@ namespace FootballPools.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Clients>> Get()
+        public async Task<List<Client>> Get()
         {
-            return await _context.Client.ToListAsync();
+            return await _context.Clients.ToListAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<Clients> Get(int id)
+        public async Task<Client> Get(int id)
         {
-            return await _context.Client.SingleOrDefaultAsync(x => x.Id == id);
+            return await _context.Clients.SingleOrDefaultAsync(x => x.Id == id);
         }
 
         [HttpPost]
-        public async Task<Clients> Post(Clients request)
+        public async Task<Client> Post(Client request)
         {
-            var newClient = request.Adapt<Clients>();
+            var newClient = request.Adapt<Client>();
             await _context.AddAsync(newClient);
             await _context.SaveChangesAsync();
             return newClient;
         }
         [HttpPatch]
-        public async Task<Clients> Patch(Clients request)
+        public async Task<Client> Patch(Client request)
         {
-            var Client = await _context.Client.FindAsync(request.Id);
+            var Client = await _context.Clients.FindAsync(request.Id);
             if (Client == null)
             {
             }
@@ -55,7 +55,7 @@ namespace FootballPools.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var client = await _context.Client.FindAsync(id);
+            var client = await _context.Clients.FindAsync(id);
             if (client == null)
             {
             }

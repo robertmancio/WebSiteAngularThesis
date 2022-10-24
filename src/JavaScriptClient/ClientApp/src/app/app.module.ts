@@ -17,7 +17,6 @@ import { ProductsComponent } from './products/products.component';
 import { ProductInventoryComponent } from './product-inventory/product.component';
 import { MatTableModule } from '@angular/material/table'
 import { MatTabsModule } from '@angular/material/tabs';
-import { AddProductComponent } from './product-inventory/add-product-category/add-product.component';
 import { AddProductCategoryComponent } from './products/add-product-category/add-product-category.component';
 import { UsersComponent } from './users/users.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -32,6 +31,9 @@ import { MatInputModule } from '@angular/material/input';
 import { ClientService } from './services/clients.service';
 import { AddClientComponent } from './clients/add-client/add-client.component';
 import { ClientsComponent } from './clients/clients.component';
+import { OrdersComponent } from './orders/orders.component';
+import { OrderService } from './services/orders.service';
+import { AddProductComponent } from './product-inventory/add-product-category/add-product.component';
 
 
 @NgModule({
@@ -58,6 +60,7 @@ import { ClientsComponent } from './clients/clients.component';
     LoginComponent,
     HomeComponent,
     ProductsComponent,
+    OrdersComponent,
     ProductInventoryComponent,
     ClientsComponent,
     AddProductCategoryComponent,
@@ -67,7 +70,7 @@ import { ClientsComponent } from './clients/clients.component';
     UsersComponent,
     LogoutComponent,
   ],
-  providers: [AuthService, LocalService, ProductService, UsersService, ProductscategoryService, ClientService],
+  providers: [AuthService, OrderService, LocalService, ProductService, UsersService, ProductscategoryService, ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

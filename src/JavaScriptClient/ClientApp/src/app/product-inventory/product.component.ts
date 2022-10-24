@@ -17,7 +17,7 @@ import { Observable } from 'rxjs';
 })
 
 export class ProductInventoryComponent implements OnInit {
-  product: Product[] = [];
+  product: Product[] = [];s
   dataSource = new MatTableDataSource<Product>();
   displayedColumns: string[] = ['id', 'name','details', 'price', 'product', 'actions'];
 

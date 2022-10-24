@@ -22,7 +22,7 @@ namespace FootballPools.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var products = await _context.Product.Include(x => x.Product).
+            var products = await _context.InventoryProducts.Include(x => x.Product).
                 ToListAsync();
             return Ok(products.Adapt<List<InventoryProduct>>());
         }
@@ -35,7 +35,7 @@ namespace FootballPools.Controllers
         [HttpGet("{id}")]
         public async Task<InventoryProduct> Get(int id)
         {
-            return await _context.Product.SingleOrDefaultAsync(x => x.Id == id);
+            return await _context.InventoryProducts.SingleOrDefaultAsync(x => x.Id == id);
         }
 
         [HttpPost]
@@ -47,9 +47,9 @@ namespace FootballPools.Controllers
             return newProduct;
         }
         [HttpPatch]
-        public async Task<Product> Patch(InventoryProduct request)
+        public async Task<InventoryProduct> Patch(InventoryProduct request)
         {
-            var product = await _context.Products.FindAsync(request.Id);
+            var product = await _context.InventoryProducts.FindAsync(request.Id);
             if (product == null)
             {
             }
@@ -61,7 +61,7 @@ namespace FootballPools.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = await _context.InventoryProducts.FindAsync(id);
             if (product == null)
             {
             }

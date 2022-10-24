@@ -1,6 +1,6 @@
 ﻿namespace JavaScriptClient.Data.Page
 {
-    public class Clients
+    public class Client
     {
         public int Id { get; set; }
         public string Name { get; set; }
