@@ -10,38 +10,44 @@ using Microsoft.EntityFrameworkCore;
 namespace FootballPools.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
-    public class ProductInventoryController : ControllerBase
+    [Route("[controller]")]
+    public class InventoryProductController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
-        public ProductInventoryController(ApplicationDbContext context)
+        public InventoryProductController(ApplicationDbContext context)
         {
             _context = context;
         }
-
         [HttpGet]
-        public async Task<List<ProductInventory>> Get()
+        public async Task<IActionResult> Get()
         {
-            return await _context.Product.ToListAsync();
+            var products = await _context.Product.Include(x => x.Product).
+                ToListAsync();
+            return Ok(products.Adapt<List<InventoryProduct>>());
         }
+        //[HttpGet]
+        //public async Task<List<ProductInventory>> Get()
+        //{
+        //    return await _context.Product.ToListAsync();
+        //}
 
         [HttpGet("{id}")]
-        public async Task<ProductInventory> Get(int id)
+        public async Task<InventoryProduct> Get(int id)
         {
             return await _context.Product.SingleOrDefaultAsync(x => x.Id == id);
         }
 
         [HttpPost]
-        public async Task<ProductInventory> Post(ProductInventory request)
+        public async Task<InventoryProduct> Post(InventoryProduct request)
         {
-            var newProduct = request.Adapt<ProductInventory>();
+            var newProduct = request.Adapt<InventoryProduct>();
             await _context.AddAsync(newProduct);
             await _context.SaveChangesAsync();
             return newProduct;
         }
         [HttpPatch]
-        public async Task<Product> Patch(ProductInventory request)
+        public async Task<Product> Patch(InventoryProduct request)
         {
             var product = await _context.Products.FindAsync(request.Id);
             if (product == null)

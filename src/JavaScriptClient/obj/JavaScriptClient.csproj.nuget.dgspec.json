@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\JavaScriptClient\\JavaScriptClient.csproj": {}
+    "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\JavaScriptClient\\JavaScriptClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\JavaScriptClient\\JavaScriptClient.csproj": {
+    "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\JavaScriptClient\\JavaScriptClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\JavaScriptClient\\JavaScriptClient.csproj",
+        "projectUniqueName": "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\JavaScriptClient\\JavaScriptClient.csproj",
         "projectName": "JavaScriptClient",
-        "projectPath": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\JavaScriptClient\\JavaScriptClient.csproj",
+        "projectPath": "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\JavaScriptClient\\JavaScriptClient.csproj",
         "packagesPath": "C:\\Users\\RM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\JavaScriptClient\\obj\\",
+        "outputPath": "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\JavaScriptClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\RM\\AppData\\Roaming\\NuGet\\NuGet.Config",

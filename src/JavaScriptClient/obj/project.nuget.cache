@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A/eTIfR6K8KBLR1cAybkD4ZKyNuWz75piCfwvuSJ7AootGLttO7E21IKTEp/qJg8zmSHIfh1FB5mWMnWHpkePQ==",
+  "dgSpecHash": "8uAGtmyoYDfgFwXX0HSpEO+LpId24OCZqvgy/aYdwC92m4208lBulNHxxLUteyt6jMx3KyE1qsHyWiG+knLZiQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\JavaScriptClient\\JavaScriptClient.csproj",
+  "projectFilePath": "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\JavaScriptClient\\JavaScriptClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RM\\.nuget\\packages\\duende.bff\\1.2.3\\duende.bff.1.2.3.nupkg.sha512",
     "C:\\Users\\RM\\.nuget\\packages\\duende.bff.yarp\\1.2.3\\duende.bff.yarp.1.2.3.nupkg.sha512",

@@ -8,22 +8,22 @@ import { Product } from '../models/product-model';
 })
 export class ProductService {
   
-  baseApiUrl: string = 'api/';
+  baseApiUrl: string = '/';
   constructor(private http: HttpClient) { }
 
   getAllProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseApiUrl + 'productInventory');
+    return this.http.get<Product[]>(this.baseApiUrl + 'inventoryProduct');
   }
 
   addProduct(addProductRequest: Product): Observable<Product> {
-    return this.http.post<Product>(this.baseApiUrl + 'productInventory',
+    return this.http.post<Product>(this.baseApiUrl + 'inventoryProduct',
       addProductRequest);
   }
   patchProduct(patchProductRequest: Product): Observable<Product> {
-    return this.http.patch<Product>(this.baseApiUrl + 'productInventory',
+    return this.http.patch<Product>(this.baseApiUrl + 'inventoryProduct',
       patchProductRequest);
   }
   deleteProduct(id: number): Observable<any> {
-    return this.http.delete(this.baseApiUrl + 'productInventory/' + id);
+    return this.http.delete(this.baseApiUrl + 'inventoryProduct/' + id);
   }
 }

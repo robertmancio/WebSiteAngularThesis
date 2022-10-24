@@ -14,4 +14,5 @@ export class Product {
   public details?: string;
   public price?: number;
   public productId?: number;
+  public index?: number;
 }

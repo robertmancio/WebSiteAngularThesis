@@ -9,5 +9,7 @@ public class ApplicationDbContext : DbContext
     {
     }
     public DbSet<Product> Products { get; set; }
-    public DbSet<ProductInventory> Product { get; set; }
+    public DbSet<InventoryProduct> Product { get; set; }
+    public DbSet<Clients> Client { get; set; }
+    public DbSet<Orders> Order { get; set; }
 }

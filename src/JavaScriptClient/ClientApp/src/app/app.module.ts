@@ -28,6 +28,7 @@ import { ProductService } from './services/product.service';
 import { UsersService } from './services/users.service';
 import { ProductscategoryService } from './services/productscategory.service';
 import { ManageUsersComponent } from './users/manage-users/manage-users.component';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { ManageUsersComponent } from './users/manage-users/manage-users.componen
     HttpClientModule,
     MatDialogModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatInputModule
 
   ],
   declarations: [

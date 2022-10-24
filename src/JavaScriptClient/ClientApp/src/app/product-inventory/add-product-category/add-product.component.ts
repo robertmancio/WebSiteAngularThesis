@@ -1,14 +1,14 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../../models/product-model';
+import { ProductsCategory } from '../../models/productscategory-model';
 import { FormGroup, FormBuilder,Validators } from '@angular/forms'
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ProductService } from '../../services/product.service';
+import { Observable } from 'rxjs';
+import { ProductscategoryService } from '../../services/productscategory.service';
 
-interface Role {
-  value: string;
-  viewValue: string;
-}
+
 
 @Component({
   selector: 'add-product',
@@ -18,7 +18,7 @@ interface Role {
 
 export class AddProductComponent implements OnInit {
   product: Product[] = [];
-
+  productCategory$: Observable<ProductsCategory[]> = new Observable<ProductsCategory[]>();
   productInvForm!: FormGroup;
   actionBtn : string = "Save"
   actiontitle : string = "Add"
@@ -30,19 +30,22 @@ export class AddProductComponent implements OnInit {
     productId: 0
 
   };
-  roles: Role[] = [
-    { value: 'admin', viewValue: 'Admin' },
-    { value: 'employee', viewValue: 'Employee' },
-  ];
 
   constructor(private dialogRef: MatDialogRef<AddProductComponent>,
     @Inject(MAT_DIALOG_DATA) public data,
-    private productCategoryService: ProductService,
+    private productService: ProductService,
+    private productCategoryService: ProductscategoryService,
     private router: Router,
     private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.productCategory$ = this.productCategoryService.getAllProductsCategory();
+    console.log(this.productCategory$);
     this.productInvForm = this.formBuilder.group({
+      Name: ['', Validators.required],
+      Details: ['', Validators.required],
+      Price: ['', Validators.required],
+      ProductId: ['', Validators.required],
     })
 
     if (this.data) {
@@ -55,13 +58,13 @@ export class AddProductComponent implements OnInit {
   }
   addProduct() {
     if (this.actionBtn == "Save") {
-      this.productCategoryService.addProduct(this.productInvForm.value).subscribe(response => {
+      this.productService.addProduct(this.productInvForm.value).subscribe(response => {
         console.log(response);
         this.dialogRef.close(true);
       })
     } else {
       this.addProductRequest.name = this.productInvForm.value.Name;
-      this.productCategoryService.patchProduct(this.addProductRequest).subscribe(response => {
+      this.productService.patchProduct(this.addProductRequest).subscribe(response => {
         console.log(response);
         this.dialogRef.close(true);
       })

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WYvIeN3GY2g6eLf4TIKDFBm3TNhvGRnqR6XT9wMtDrM=",
+  "Hash": "CKo8V4jjvpT6fFTANg4TGUWmFRc+yUZjoVBxwugH4oc=",
   "Source": "JavaScriptClient",
   "BasePath": "_content/JavaScriptClient",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "JavaScriptClient\\wwwroot",
       "Source": "JavaScriptClient",
-      "ContentRoot": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\JavaScriptClient\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\JavaScriptClient\\wwwroot\\",
       "BasePath": "_content/JavaScriptClient",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\JavaScriptClient\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\JavaScriptClient\\wwwroot\\favicon.ico",
       "SourceId": "JavaScriptClient",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\JavaScriptClient\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\JavaScriptClient\\wwwroot\\",
       "BasePath": "_content/JavaScriptClient",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",

@@ -1,0 +1,60 @@
+<h1 mat-dialog-title>{{actiontitle}} Product Category</h1>
+<div mat-dialog-content>
+  <form [formGroup]="productForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Product Category Name</mat-label>
+      <input formControlName="Name" matInput placeholder="Name">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button style="margin-left: 8px" mat-raised-button color="primary" (click)="addProductCategory()">{{actionBtn}}</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="mat-elevation-z8 table-fixed max-w-screen-lg mx-auto">
+  <div class="container">
+    <form>
+
+      <div id="title">
+        <h1  class=" mat-typography">Create New Product Category</h1>
+      </div>
+      <div id="categoryname">
+        <mat-form-field appearance="standard" (ngSubmit)="addProductCategoryRequest()">
+          <mat-label>Category Name</mat-label>
+          <input matInput maxlength="15" inputmode="tel" placeholder="Type Category Name" formControlName="name" id="name"
+                 [(ngModel)]="addProductCategoryRequest.name" #nameInput>
+        </mat-form-field>
+        <mat-form-field appearance="standard"  id="categoryname">
+          <mat-label>Description</mat-label>
+          <input matInput maxlength="15" inputmode="tel" placeholder="Category Description" formControlName="description" #nameInput>
+        </mat-form-field>
+      </div>
+
+      <div id="submit">
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>-->

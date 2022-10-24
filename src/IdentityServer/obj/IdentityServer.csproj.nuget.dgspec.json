@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\IdentityServer\\IdentityServer.csproj": {}
+    "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\IdentityServer\\IdentityServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\IdentityServer\\IdentityServer.csproj": {
+    "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\IdentityServer\\IdentityServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\IdentityServer\\IdentityServer.csproj",
+        "projectUniqueName": "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\IdentityServer\\IdentityServer.csproj",
         "projectName": "IdentityServer",
-        "projectPath": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\IdentityServer\\IdentityServer.csproj",
+        "projectPath": "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\IdentityServer\\IdentityServer.csproj",
         "packagesPath": "C:\\Users\\RM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\IdentityServer\\obj\\",
+        "outputPath": "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\IdentityServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\RM\\AppData\\Roaming\\NuGet\\NuGet.Config",

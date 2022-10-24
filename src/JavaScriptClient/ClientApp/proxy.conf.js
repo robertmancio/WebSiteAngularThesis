@@ -18,6 +18,7 @@ const PROXY_CONFIG = [
       "/.well-known",
       "/_framework",
       "/productCategory",
+      "/inventoryProduct",
       "/remote",
       "/remote/manageUsers"
     ],

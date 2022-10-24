@@ -2,7 +2,7 @@
 "SpaProxyServer": {
 "ServerUrl": "https://localhost:5004",
 "LaunchCommand": "npm start",
-"WorkingDirectory": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\JavaScriptClient\\ClientApp\\",
+"WorkingDirectory": "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\JavaScriptClient\\ClientApp\\",
 "MaxTimeoutInSeconds": "120"
 }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OQvZWAhyuX6kAmF7EVY8OmhNU/KyeeuodFSyBP2zQxttPvIt9f3rE6YIvohji9k2MBRLsqPGpBiFP88R8BOuVA==",
+  "dgSpecHash": "xYR0aOnmkNGbOi57kibcJiU2gQ4OgYshTS8+uqthipFR+q8e/j+QnL7fAJLM0dJQEZU0NXzlFPZwD1hI25H65w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\RM\\Desktop\\TESISPR\\GUATEMALAFELIZIMPORTS\\WebSiteAngularThesis\\src\\IdentityServer\\IdentityServer.csproj",
+  "projectFilePath": "C:\\Users\\RM\\Desktop\\TESISPR\\tesis\\WebSiteAngularThesis\\src\\IdentityServer\\IdentityServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RM\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\RM\\.nuget\\packages\\duende.identityserver\\6.1.5\\duende.identityserver.6.1.5.nupkg.sha512",

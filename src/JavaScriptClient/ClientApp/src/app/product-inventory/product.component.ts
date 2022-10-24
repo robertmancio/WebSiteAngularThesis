@@ -7,6 +7,7 @@ import { ProductscategoryService } from 'src/app/services/productscategory.servi
 import { AddProductComponent } from './add-product-category/add-product.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductService } from '../services/product.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -18,7 +19,7 @@ import { ProductService } from '../services/product.service';
 export class ProductInventoryComponent implements OnInit {
   product: Product[] = [];
   dataSource = new MatTableDataSource<Product>();
-  displayedColumns: string[] = ['id', 'name',  'actions'];
+  displayedColumns: string[] = ['id', 'name','details', 'price', 'product', 'actions'];
 
   openDialog() {
     const dialogRef = this.dialog.open(AddProductComponent, {
@@ -42,13 +43,17 @@ export class ProductInventoryComponent implements OnInit {
   constructor(private productService: ProductService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.productService.getAllProducts().subscribe(productINV => {
-      this.product = productINV;
-      console.log(this.product);
+    this.productService.getAllProducts().subscribe(inventoryProduct => {
+      console.log(inventoryProduct);
+      inventoryProduct.forEach(function (row, index) {
+          row.index = index;
+      });
+      this.product = inventoryProduct;
       this.dataSource.data = this.product;
       this.dataSource.paginator = this.matPaginator;
     });
   }
+
   editProduct(row: any) {
     const dialogRef = this.dialog.open(AddProductComponent, {
       width: '30%',
